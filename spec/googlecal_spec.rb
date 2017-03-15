@@ -41,7 +41,7 @@ describe Googlecal do
         event = @g.create_event('primary', summary: 'test delete')
         expect(event).not_to be_nil
         # this part is broken
-        # e = @g.get_event('primary', event.id)
+        e = @g.get_event('primary', event.id)
         @g.delete_event('primary', event.id)
       end
     end
