@@ -13,12 +13,14 @@ module Googlecal
     # TODO: not sure what this is for, needs documentation
     OOB_URL = 'urn:ietf:wg:oauth:2.0:oob'
 
-    ##
     # Initialize a new googlecal instance and authenticate with google with file paths
-    # @param [String] application_name Name of application in gooogle console that you need to setup
-    # @param [String] credentials_path The file path to loading credentials path
-    # @param [String] client_secrets_path The file path to json file holding client secrets
-    # @param [String] scope The access scope for the use of the google api session
+    #
+    # ==== Attributes
+    #
+    # * +:application_name:+ - Name of application in gooogle console that you need to setup
+    # * +:credentials_path:+  - The file path to loading credentials path
+    # * +:client_secrets_path:+ - The file path to json file holding client secrets
+    # * +:scope:+ -The access scope for the use of the google api session
     def initialize(application_name,
                    credentials_path = File.join(Dir.home, '.credentials',"calendar-ruby-quickstart.yaml"),
                    client_secrets_path = 'client_secret.json',
@@ -56,19 +58,23 @@ module Googlecal
       return result
     end
 
-    ##
     # Delete an even from a calendar by event id
-    # @param [String] calendar_id Unique id of calendar
-    # @param [String] event_id Unique id of event to be deleted
+    #
+    # ==== Attributes
+    #
+    # * +:calendar_id:+ - Unique id of calendar
+    # * +:event_id:+ - Unique id of event to be deleted
     def delete_event(calendar_id = 'primary', event_id)
       result = @calendar_service.delete_event(calendar_id, event_id)
       return result
     end
 
-    ##
     # Get an event by event id
-    # @param [String] calendar_id Unique id of calendar
-    # @param [String] event_id Unique id of event
+    #
+    # ==== Attributes
+    #
+    # * +:calendar_id:+ - Unique id of calendar
+    # * +:event_id:+ - Unique id of event
     # TODO: for some reason this part is not working with some of the tests i have tried
     # with it
     def get_event(calendar_id = 'primary', event_id)
@@ -78,11 +84,13 @@ module Googlecal
 
     private
 
-    ##
     # Authenticate with google with file paths and a scope
-    # @param [String] credentials_path The file path to loading credentials path
-    # @param [String] client_secrets_path The file path to json file holding client secrets
-    # @param [String] scope The access scope for the use of the google api session
+    #
+    # ==== Attributes
+    #
+    # * +:credentials_path:+ - The file path to loading credentials path
+    # * +:client_secrets_path:+ - The file path to json file holding client secrets
+    # * +:scope:+ - The access scope for the use of the google api session
     def authorize(credentials_path, client_secrets_path, scope)
       FileUtils.mkdir_p(File.dirname(credentials_path))
       client_id = Google::Auth::ClientId.from_file(client_secrets_path)
@@ -107,10 +115,12 @@ module Googlecal
       return credentials
     end
 
-    ##
     # Setup calendar service for a session
-    # @param [String] application_name Name of application setup in google console
-    # @param [Google::Auth::UserAuthorizer] credentials User authentication credentials
+    #
+    # ==== Attributes
+    #
+    # * +:application_name:+ - Name of application setup in google console
+    # * +:credentials:+ - User authentication credentials
     def setup_calendar_service(application_name, credentials)
       service = Google::Apis::CalendarV3::CalendarService.new
       service.client_options.application_name = application_name
