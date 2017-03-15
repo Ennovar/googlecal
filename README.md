@@ -1,3 +1,5 @@
+[![Build
+Status](https://travis-ci.org/Ennovar/googlecal.svg?branch=master)](https://travis-ci.org/Ennovar/googlecal)
 # Googlecal
 _simple wrapper for google calendar api for ruby_
 
