@@ -34,3 +34,14 @@ Open the following url in the browser ............
 irb console to authenticate you.
 
 **Then you are clear to start running tests**
+
+
+## Generating Documentation
+1. install rdoc with
+```
+gem install rdoc
+```
+2. generate the docs by running this command in the project directory
+```
+rdoc
+```
