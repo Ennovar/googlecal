@@ -10,3 +10,4 @@
 # dont keep your client_secrets in git
 client_secret.json
 /doc/
+.env

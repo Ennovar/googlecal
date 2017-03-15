@@ -2,15 +2,23 @@ require "spec_helper"
 
 describe Googlecal do
   describe Googlecal::Base do
-    before :each do
-      if !File.file?('client_secret.json')
-        throw "Please add your client secrets to client_secret.json to authenticate before running tests"
-      end
-    end
     describe 'initialize' do
-      it 'should work' do
-        g = Googlecal::Base.new('Google Calendar API Ruby Quickstart')
-        expect(g.credentials).not_to be_nil
+      it 'should initialize with file' do
+        if !File.exists?('client_secret.json')
+          g = Googlecal::Base.new('Google Calendar API Ruby Quickstart')
+          expect(g.credentials).not_to be_nil
+        else
+          skip 'unable to authenticate with file.... add client_secret.json to project directory'
+        end
+      end
+      it 'should initialize with env' do
+        puts ENV['GCAL_TOKEN_STORE_PATH']
+        if ENV['GCAL_CLIENT_ID']
+          g = Googlecal::Base.new('Google Calendar API Ruby Quickstart', true)
+          expect(g.credentials).not_to be_nil
+        else
+          skip 'enviroment not setup to pass with test, skipped'
+        end
       end
     end
 
