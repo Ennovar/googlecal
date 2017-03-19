@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Googlecal::GEvent - Googlecal</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Base.html">Googlecal::Base</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-end_time-3D">#end_time=</a>
+    
+    <li ><a href="#method-i-id">#id</a>
+    
+    <li ><a href="#method-i-save">#save</a>
+    
+    <li ><a href="#method-i-start_time-3D">#start_time=</a>
+    
+    <li ><a href="#method-i-status">#status</a>
+    
+    <li ><a href="#method-i-summary-3D">#summary=</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Googlecal::GEvent">
+  <h1 id="class-Googlecal::GEvent" class="class">
+    class Googlecal::GEvent
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-end_time" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">end_time</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-start_time" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">start_time</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-summary" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">summary</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(event = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>initialize with a google event instance</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/googlecal/gevent.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">event</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@event</span> = <span class="ruby-identifier">event</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-end_time-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">end_time=</span><span
+            class="method-args">(value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="end_time-3D-source">
+            <pre><span class="ruby-comment"># File lib/googlecal/gevent.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">end_time=</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">end</span>.<span class="ruby-identifier">date_time</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">iso8601</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-id" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">id</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="id-source">
+            <pre><span class="ruby-comment"># File lib/googlecal/gevent.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">id</span>
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-save" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save-source">
+            <pre><span class="ruby-comment"># File lib/googlecal/gevent.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">update</span>(<span class="ruby-identifier">start</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">date_time</span><span class="ruby-operator">:</span> <span class="ruby-identifier">start_time</span> }, <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-start_time-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">start_time=</span><span
+            class="method-args">(value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="start_time-3D-source">
+            <pre><span class="ruby-comment"># File lib/googlecal/gevent.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start_time=</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-comment"># set it to iso8601</span>
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">start</span>.<span class="ruby-identifier">date_time</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">iso8601</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">status</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="status-source">
+            <pre><span class="ruby-comment"># File lib/googlecal/gevent.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">status</span>
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">status</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-summary-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">summary=</span><span
+            class="method-args">(value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="summary-3D-source">
+            <pre><span class="ruby-comment"># File lib/googlecal/gevent.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">summary=</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">summary</span> = <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
