@@ -53,5 +53,20 @@ describe Googlecal do
         @g.delete_event('primary', event.id)
       end
     end
+    describe '.get_event' do
+      before :each do
+        @g = Googlecal::Base.new('Google Calendar API Ruby Quickstart')
+        @event = @g.create_event('primary', summary: 'test')
+        puts @event.to_json
+      end
+      after :each do
+        # delete event that was created
+        @g.delete_event(@event.id)
+      end
+      it 'should get event with same id' do
+        event = @g.get_event('primary', @event.id)
+        expect(event.id).to eq(@event.id)
+      end
+    end
   end
 end
