@@ -103,13 +103,25 @@ module Googlecal
         # user must verify application
         puts "Open the following url in the browser"
         puts url
-        code = gets
-        credentials = authorizer.get_and_store_credentials_from_code(
-          user_id: user_id,
-          code: code,
-          base_url: OOB_URL
-        )
-      end
+        code = nil
+        if ENV['GOOGLE_CLIENT_SECRETE_TOKEN']
+          code = ENV['GOOGLE_CLIENT_SECRETE_TOKEN']
+          credentials = authorizer.get_and_store_credentials_from_code(
+            user_id: user_id,
+            code: code,
+            base_url: OOB_URL
+          )
+          return credentials
+         else
+          code = gets
+          credentials = authorizer.get_and_store_credentials_from_code(
+            user_id: user_id,
+            code: code,
+            base_url: OOB_URL
+          )
+          return credentials
+        end
+     end
       # return the produced credentials
       return credentials
     end
