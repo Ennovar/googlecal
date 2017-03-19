@@ -9,7 +9,6 @@ _simple wrapper for google calendar api for ruby_
 
 ## This project is in Alpha!!!
 
-
 ## Testing Setup
 Before you are ready to start developing on the project there are a
 couple steps to follow
