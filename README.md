@@ -1,5 +1,7 @@
 [![Build
 Status](https://travis-ci.org/Ennovar/googlecal.svg?branch=master)](https://travis-ci.org/Ennovar/googlecal)
+[![Gem
+Version](https://badge.fury.io/rb/googlecal.svg)](https://badge.fury.io/rb/googlecal)
 # Googlecal
 _simple wrapper for google calendar api for ruby_
 
