@@ -12,5 +12,6 @@ Dotenv.load('.env')
 # require "pry"
 # Pry.start
 
+Googlecal::Base.new('console')
 require "irb"
 IRB.start

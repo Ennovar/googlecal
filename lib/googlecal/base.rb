@@ -18,6 +18,7 @@ module Googlecal
     # * +:client_secrets_path:+ - The file path to json file holding client secrets
     # * +:scope:+ -The access scope for the use of the google api session
     def initialize(application_name,
+                   calendar_id = 'primary',
                    authenticate_with_env = false,
                    credentials_path = File.join(Dir.home, '.credentials',"calendar-ruby-quickstart.yaml"),
                    client_secrets_path = 'client_secret.json',
@@ -31,6 +32,7 @@ module Googlecal
         @credentials = authorize(credentials_path, client_secrets_path, scope)
       end
      @@calendar_service = setup_calendar_service(application_name, @credentials)
+     @@calendar_id = calendar_id
     end
 
     def events(calendar_id = 'primary', **opts)
@@ -168,6 +170,10 @@ module Googlecal
       else
         return @@calendar_service
       end
+    end
+
+    def self.calendar_id
+      @@calendar_id
     end
   end
 end

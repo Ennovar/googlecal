@@ -67,5 +67,26 @@ describe Googlecal do
         expect(GEvent.find(event_id).status).to eq('cancelled')
       end
     end
+    describe '.update' do
+      before :each do
+        setup_gcalendar
+        @event = GEvent.create(event_params)
+      end
+      it 'should update event' do
+        event = GEvent.new(@event)
+        pending 'not implemented correctly yet'
+        event.update(summary: 'test again')
+      end
+    end
+    describe '.save' do
+      before :each do
+        setup_gcalendar
+        @event = GEvent.create(event_params)
+      end
+      it 'should save event' do
+        @event.summary = 'changed'
+        @event.save
+      end
+    end
   end
 end

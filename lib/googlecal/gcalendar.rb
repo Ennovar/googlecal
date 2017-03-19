@@ -4,8 +4,6 @@ module Googlecal
 
     # initialize
     def initialize()
-      puts 'hello'
-      puts Base.calendar_service
     end
 
     def delete
