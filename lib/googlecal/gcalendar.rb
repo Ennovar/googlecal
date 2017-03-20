@@ -18,6 +18,10 @@ module Googlecal
       # find by goole calendar id
     end
 
+    def self.all
+      service.list_calendar_lists
+    end
+
     private
 
     def service

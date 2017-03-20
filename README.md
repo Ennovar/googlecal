@@ -7,6 +7,7 @@ Version](https://badge.fury.io/rb/googlecal.svg)](https://badge.fury.io/rb/googl
 
 _simple wrapper for google calendar api for ruby_
 
+![Documentation](https://ennovar.github.io/googlecal/)
 ## This project is in Alpha!!!
 
 ## Testing Setup

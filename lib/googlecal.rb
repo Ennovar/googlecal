@@ -5,6 +5,7 @@ require 'googleauth'
 require 'googleauth/stores/file_token_store'
 require 'googlecal/base'
 require 'googlecal/gevent'
+require 'googlecal/gcalendar'
 
 # :title: Googlecal
 module Googlecal
